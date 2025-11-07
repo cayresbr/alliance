@@ -395,6 +395,7 @@ header {
 .whatsapp {
   background: #25d366;
   color: var(--white);
+  min-width: 20%;
 }
 
 .whatsapp:hover {
@@ -406,6 +407,7 @@ header {
 .sms {
   background: var(--secondary-color);
   color: var(--white);
+  min-width: 20%;
 }
 
 .sms:hover {
@@ -415,12 +417,14 @@ header {
 }
 
 .quote-form-wrapper {
-  max-width: 800px;
+  max-width: 90%;
   margin: 0 auto;
   background: var(--white);
   padding: 3rem;
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
 }
 
 .form-row {
@@ -443,8 +447,8 @@ header {
 .form-group input,
 .form-group select,
 .form-group textarea {
-  width: 100%;
-  padding: 0.875rem;
+  width: 90%;
+  padding: 0.8rem;
   border: 2px solid #e2e8f0;
   border-radius: 8px;
   font-size: 1rem;
@@ -461,7 +465,7 @@ header {
 }
 
 .btn-submit {
-  width: 100%;
+  min-width: 20%;
   background: var(--gradient);
   color: var(--white);
   padding: 1.2rem;
@@ -727,6 +731,15 @@ header {
     grid-template-columns: 1fr;
   }
 
+  .whatsapp {
+    width: 300px;
+    
+  }
+
+  .sms {
+    width: 300px;
+  }
+
   .form-row {
     grid-template-columns: 1fr;
   }
@@ -789,9 +802,38 @@ header {
     align-items: stretch;
   }
 
+  
+
   .contact-option {
     justify-content: center;
   }
+
+
+.quote-options {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: center;
+        margin-bottom: 3rem;
+    }
+    
+    .contact-option {
+        width: 300px;
+        padding: 1.2rem 1.5rem;
+        font-size: 1rem;
+        justify-content: center;
+    }
+    
+    .contact-option i {
+        font-size: 1.3rem;
+    }
+    
+    .contact-option span {
+        font-size: 0.95rem;
+    }
+
+
+
 }
 
 @media (max-width: 480px) {
@@ -875,4 +917,17 @@ header {
   .contact-card i {
     font-size: 2rem;
   }
+
+
+
+
+  .quote-options {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contact-option {
+        width: 100%;
+        max-width: 300px;
+    }
 }
